@@ -12,8 +12,7 @@ O objetivo é automatizar a coleta, processamento e análise do **Índice de Pre
 
 | Tecnologia | Finalidade |
 |------------|------------|
-| **Databricks Community Edition** | Processamento e armazenamento dos dados |
-| **Delta Lake** | Armazenamento em tabelas otimizadas |
+| **Databricks ** | Processamento e armazenamento dos dados |
 | **Python** | Coleta dos dados via API do Banco Central |
 | **SQL** | Processamento, transformação e análise dos dados |
 | **Power BI Desktop** | Visualização e dashboard |
@@ -25,7 +24,7 @@ O objetivo é automatizar a coleta, processamento e análise do **Índice de Pre
 - **Instituição:** Banco Central do Brasil
 - **Série:** 433 — Índice de Preços ao Consumidor Amplo (IPCA)
 - **Período:** Janeiro de 1991 a Dezembro de 2025
-- **URL:** https://dadosabertos.bcb.gov.br/dataset/10844-indice-de-precos-ao-consumidor-amplo-ipca
+- **URL:**  https://dadosabertos.bcb.gov.br/dataset/10844-indice-de-precos-ao-consumidor-amplo-ipca---servicos/resource/c0980df7-ad92-47af-b71c-790825f4710a
 
 ---
 
@@ -33,11 +32,11 @@ O objetivo é automatizar a coleta, processamento e análise do **Índice de Pre
 
 ### Pré-requisitos
 - Conta no [Databricks Community Edition](https://community.cloud.databricks.com)
-- Cluster configurado com Runtime 13.3 LTS (Spark 3.4.1)
+
 
 ### Passos
-1. Faça o upload do arquivo `data/bcdata_sgs_10844.csv` no Databricks via **Data → Add Data → Upload File**
-2. Importe o notebook `notebook/ipca_analysis.ipynb` via **Workspace → Import**
+1. Faça o upload do arquivo `data/bcdata.sgs.10844.csv` no Databricks 
+2. Importe o notebook `notebook/notebook-case-ipca.ipynb` 
 3. Anexe o notebook ao cluster criado
 4. Execute as células em ordem
 
@@ -135,22 +134,6 @@ Anos com IPCA acima de 8% — como 2015 (8,11%) e 2022 (7,57%) — tendem a coin
 O Banco Central historicamente eleva a Selic em resposta a IPCAs acima da meta, o que aumenta o custo de captação dos bancos e pressiona as margens.
 
 **Ação recomendada:** Desenvolver modelos de simulação que correlacionem IPCA com Selic para antecipar cenários de funding e precificação de produtos de crédito e investimento.
-
----
-
-## 📁 Entregáveis
-
-- [x] Notebook com extração, processamento e armazenamento em Delta Lake
-- [x] Comentários e markdown explicando cada etapa do código
-- [x] Dashboard Power BI com gráficos e KPIs
-- [x] Insights estratégicos para o cliente
-- [x] Repositório público no GitHub
-
----
-
-## 👤 Autor
-
-Desenvolvido como solução para o case técnico do Banco IP2CA.
 
 ---
 
