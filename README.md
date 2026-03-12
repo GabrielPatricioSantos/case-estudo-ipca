@@ -12,7 +12,7 @@ O objetivo é automatizar a coleta, processamento e análise do **Índice de Pre
 
 | Tecnologia | Finalidade |
 |------------|------------|
-| **Databricks ** | Processamento e armazenamento dos dados |
+| **Databricks** | Processamento e armazenamento dos dados |
 | **Python** | Coleta dos dados via API do Banco Central |
 | **SQL** | Processamento, transformação e análise dos dados |
 | **Power BI Desktop** | Visualização e dashboard |
